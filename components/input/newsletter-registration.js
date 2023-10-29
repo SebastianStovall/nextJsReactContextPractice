@@ -3,6 +3,9 @@ import { useRef, useContext } from 'react';
 import classes from './newsletter-registration.module.css';
 import NotificationContext from '../../store/notification-context';
 
+// the goal of this component is pass in notification data to the NotificationProvider component so its data can be displayed Notification component ...
+// (<Notification />) component is being rendered under layout.js, the Notification coponent itself is found under notification.js
+
 function NewsletterRegistration() {
   const emailInputRef = useRef();
   const notificationCtx = useContext(NotificationContext);

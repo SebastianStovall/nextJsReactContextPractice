@@ -4,6 +4,7 @@ import Layout from '../components/layout/layout';
 import { NotificationContextProvider } from '../store/notification-context';
 import '../styles/globals.css';
 
+// wrap the <NotificationContextProvider/> around all the components so it can be accessed globally from anywhere inside our application
 function MyApp({ Component, pageProps }) {
   return (
     <NotificationContextProvider>

@@ -1,5 +1,8 @@
 import { createContext, useState, useEffect } from 'react';
 
+// this file sets up a Notification context which contains the notification content ---> {title, message, and status}, and methods to display and hide the notification
+// which is managed by the NotificationContextProvider function
+
 const NotificationContext = createContext({
   notification: null, // { title, message, status }
   showNotification: function (notificationData) {},
