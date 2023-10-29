@@ -15,6 +15,7 @@ function NewsletterRegistration() {
 
     const enteredEmail = emailInputRef.current.value;
 
+    // as we are waiting for the fetch, we can display the banner in a loading state (blue background, text = pending...)
     notificationCtx.showNotification({
       title: 'Signing up...',
       message: 'Registering for newsletter.',
