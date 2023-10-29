@@ -29,14 +29,17 @@ function NewsletterRegistration() {
       },
     })
       .then((response) => {
+        // if signup was sucessful, return the notification object with success title, message, and status
         if (response.ok) {
           return response.json();
         }
 
+        // if something went wrong, return a notification object with a status and title of error
         return response.json().then((data) => {
           throw new Error(data.message || 'Something went wrong!');
         });
       })
+      // if response.ok, it will return this object
       .then((data) => {
         notificationCtx.showNotification({
           title: 'Success!',
@@ -44,6 +47,7 @@ function NewsletterRegistration() {
           status: 'success',
         });
       })
+      // if it hit the error block, it will return this object
       .catch((error) => {
         notificationCtx.showNotification({
           title: 'Error!',
